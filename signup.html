@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sign Up Page</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-4">
+                <div class="card mt-5">
+                    <div class="card-body">
+                        <img src="tiainfotech.jpeg" alt="Company Logo" class="logo img-fluid mb-4">
+                        <input type="text" id="name" class="form-control mb-2" placeholder="Enter Name">
+                        <input type="email" id="email" class="form-control mb-2" placeholder="Enter Email">
+                        <input type="password" id="password" class="form-control mb-2" placeholder="Enter Password">
+                        <button class="btn btn-primary btn-block" onclick="createAccount()">Create Account</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function createAccount() {
+          
+            var name = document.getElementById('name').value;
+            var email = document.getElementById('email').value;
+            var password = document.getElementById('password').value;
+
+            localStorage.setItem('name', name);
+            localStorage.setItem('email', email);
+    
+            alert("Account created successfully");
+            redirectToMain();
+        }
+
+        function redirectToMain() {
+            window.location.href = "main.html";
+        }
+    </script>
+</body>
+</html>

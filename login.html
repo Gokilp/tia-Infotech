@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login Page</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-4">
+                <div class="card mt-5">
+                    <div class="card-body">
+                        <img src="tiainfotech.jpeg" alt="Company Logo" class="logo img-fluid mb-4">
+                        <input type="email" class="form-control mb-2" placeholder="Enter Email">
+                        <input type="password" class="form-control mb-2" placeholder="Enter Password">
+                        <button class="btn btn-primary btn-block" onclick="login()">Login</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function login() {
+            redirectToUserProfile();
+        }
+
+        function redirectToUserProfile() {
+            window.location.href = "user_profile.html";
+        }
+    </script>
+</body>
+</html>
